@@ -2,29 +2,38 @@ using UnityEngine;
 
 public class LaserShooter : MonoBehaviour
 {
-    public GameObject laserPrefab;      // Assign in Inspector
-    public Transform firePoint;         // Assign the fire point
-    public float fireInterval;     // Time between shots
-    public float laserSpeed;       // Speed of the laser
+    public GameObject laserPrefab;      // Assign laser prefab in Inspector
+    public Transform firePoint;         // Assign fire point Transform in Inspector
+    public float fireInterval = 2f;     // Time between shots (seconds)
+    public float laserSpeed = 5f;       // Speed of the laser
+    public float shootAngle = 0f;       // Angle in degrees at which laser shoots (0 = right)
 
     private void Start()
     {
-        // Start shooting repeatedly
+        // Start shooting repeatedly after 1 second, then every fireInterval seconds
         InvokeRepeating(nameof(ShootLaser), 1f, fireInterval);
     }
 
     void ShootLaser()
     {
-        GameObject laser = Instantiate(laserPrefab, firePoint.position, Quaternion.identity);
-        
-        // Make the laser move to the right
+        // Calculate rotation based on shootAngle
+        Quaternion rotation = Quaternion.Euler(0, 0, shootAngle);
+
+        // Instantiate laser at firePoint position with calculated rotation
+        GameObject laser = Instantiate(laserPrefab, firePoint.position, rotation);
+
         Rigidbody2D rb = laser.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.velocity = Vector2.right * laserSpeed;
+            // Convert angle to radians and calculate velocity direction
+            float angleRad = shootAngle * Mathf.Deg2Rad;
+            Vector2 direction = new Vector2(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
+            
+            // Set laser velocity based on direction and speed
+            rb.linearVelocity = direction * laserSpeed;
         }
 
-        // Optional: destroy laser after 5 seconds to clean up
-        Destroy(laser, 3f);
+        // Destroy laser after 3 seconds to avoid clutter
+      //  Destroy(laser, 3f);
     }
 }

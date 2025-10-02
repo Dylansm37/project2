@@ -13,13 +13,13 @@ public class LevelEnd : MonoBehaviour
         {
             hasTriggered = true;
 
-            // 🔒 Disable player movement script
+           
            PlayerMovement movementScript = collision.GetComponent<PlayerMovement>();
 
             if (movementScript != null)
                 movementScript.enabled = false;
 
-            // 🔊 Play sound
+            
             if (levelCompleteSound != null)
             {
                 levelCompleteSound.Play();

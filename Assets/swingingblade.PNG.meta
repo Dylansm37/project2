@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: 984f7fff5f97b014f9a042eefd871d7a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -642607884655939208
+    second: swingingblade_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: swingingblade_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 410
+        height: 554
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 19.345154, y: -250.0573}
+        - {x: 36.605087, y: -241.69527}
+        - {x: 55.89334, y: -229.65479}
+        - {x: 68.65033, y: -216.68008}
+        - {x: 75.061035, y: -206.95569}
+        - {x: 80.35968, y: -198.62534}
+        - {x: 82, y: -194}
+        - {x: 76, y: -197}
+        - {x: 64, y: -198}
+        - {x: 43, y: -199}
+        - {x: 16, y: -192}
+        - {x: -4, y: -177}
+        - {x: -7.826111, y: -170}
+        - {x: 11.047913, y: -28.995407}
+        - {x: 29, y: 130}
+        - {x: -4, y: 134}
+        - {x: -34.89366, y: -169.21976}
+        - {x: -44.879684, y: -174.53307}
+        - {x: -59.08026, y: -180.66177}
+        - {x: -80.79875, y: -185.01523}
+        - {x: -98.88867, y: -184.07767}
+        - {x: -110.4189, y: -181.46161}
+        - {x: -121.95942, y: -175.71103}
+        - {x: -130.70995, y: -171.47438}
+        - {x: -123.61027, y: -195.0878}
+        - {x: -112.03536, y: -212.20071}
+        - {x: -94.22039, y: -229.65106}
+        - {x: -72.19133, y: -244.1307}
+        - {x: -51.688065, y: -251.9987}
+        - {x: -29.803452, y: -256.04892}
+        - {x: -2.8202972, y: -255.65158}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 871b739988ff417f0800000000000000
+      internalID: -642607884655939208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ee4928f240f8e554b9ec80053ad343f7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      swingingblade_0: -642607884655939208
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

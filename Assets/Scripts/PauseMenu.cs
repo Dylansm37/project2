@@ -31,6 +31,13 @@ public class PauseMenu : MonoBehaviour
         isPaused = true;
     }
 
+    public void RestartLevel()
+    {
+        Time.timeScale = 1f; // Reset time scale if paused
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+
     public void QuitToMainMenu()
     {
         Time.timeScale = 1f; // Make sure time is normal again
