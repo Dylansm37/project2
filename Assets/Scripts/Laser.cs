@@ -2,6 +2,21 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
+
+
+    private AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
+    }
+
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the laser hit the player by tag
