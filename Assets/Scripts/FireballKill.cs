@@ -7,9 +7,7 @@ public class FireballKillPlayer : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
            PlayerDeath playerDeath = collision.GetComponent<PlayerDeath>();
-           // Destroy(collision.gameObject); 
            playerDeath.Die();
-            
         }
     }
 }

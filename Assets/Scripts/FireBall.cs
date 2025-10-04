@@ -3,10 +3,10 @@ using UnityEngine;
 public class FireballOrbit : MonoBehaviour
 {
     [Header("Orbit Settings")]
-    public Transform centerPoint;      // Center of the oval path
-    public float xRadius = 10f;        // Width of the oval (horizontal)
-    public float yRadius = 5f;         // Height of the oval (vertical)
-    public float speed = 1f;           // Orbit speed
+    public Transform centerPoint;    
+    public float xRadius = 10f;        
+    public float yRadius = 5f;         
+    public float speed = 1f;           
 
     private float angle = 0f;
 
@@ -16,7 +16,6 @@ public class FireballOrbit : MonoBehaviour
 
         if (angle > Mathf.PI * 2f) angle -= Mathf.PI * 2f;
 
-        // Oval movement on X-Y plane
         float x = Mathf.Cos(angle) * xRadius;
         float y = Mathf.Sin(angle) * yRadius;
 

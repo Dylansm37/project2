@@ -11,16 +11,14 @@ public class PlayerFireTrail : MonoBehaviour
 
     void Update()
     {
-        // Get input direction
+        
         moveDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
 
-        // Hide all fires by default
         fireTop.SetActive(false);
         fireBottom.SetActive(false);
         fireLeft.SetActive(false);
         fireRight.SetActive(false);
 
-        // Activate fire based on movement
         if (moveDirection == Vector2.right)
             fireLeft.SetActive(true);
         else if (moveDirection == Vector2.left)
@@ -31,7 +29,7 @@ public class PlayerFireTrail : MonoBehaviour
             fireTop.SetActive(true);
         else
         {
-            // Diagonal movement
+            
             if (moveDirection.x > 0)
                 fireLeft.SetActive(true);
             else if (moveDirection.x < 0)

@@ -14,15 +14,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Get WASD or arrow key input
-        movement.x = Input.GetAxisRaw("Horizontal"); // A/D or Left/Right
-        movement.y = Input.GetAxisRaw("Vertical");   // W/S or Up/Down
-        movement = movement.normalized; // Prevent faster diagonal movement
+        movement.x = Input.GetAxisRaw("Horizontal"); 
+        movement.y = Input.GetAxisRaw("Vertical");   
+        movement = movement.normalized; 
     }
 
     void FixedUpdate()
     {
-        // Move the player
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }

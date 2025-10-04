@@ -25,8 +25,6 @@ public static class SaveSystem
         string json = JsonUtility.ToJson(data);
         PlayerPrefs.SetString(SaveKey, json);
         PlayerPrefs.Save();
-
-        Debug.Log("Game saved.");
     }
 
     public static SaveData LoadGame()
@@ -39,7 +37,6 @@ public static class SaveSystem
         }
         else
         {
-            Debug.LogWarning("No save found!");
             return null;
         }
     }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AxeSpinner : MonoBehaviour
 {
-    public float rotationSpeed = -180f; // Degrees per second
+    public float rotationSpeed = -180f; 
 
     void Update()
     {

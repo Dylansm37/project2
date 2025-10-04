@@ -2,20 +2,19 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform target; // The player
+    public Transform target; 
     public float smoothSpeed = 5f;
     public Vector3 offset;
 
     void LateUpdate()
-{
-    if (target != null)
     {
-        transform.position = new Vector3(
-            target.position.x + offset.x,
-            target.position.y + offset.y,
-            transform.position.z
-        );
+        if (target != null)
+        {
+            transform.position = new Vector3(
+                target.position.x + offset.x,
+                target.position.y + offset.y,
+                transform.position.z
+            );
+        }
     }
-}
-
 }

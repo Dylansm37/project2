@@ -22,8 +22,6 @@ public class ButtonTrigger : MonoBehaviour
             {
                 doorOpenSound.Play();
             }
-
-            Debug.Log("Button activated!");
         }
     }
 }

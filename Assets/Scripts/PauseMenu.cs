@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     private bool isPaused = false;
     public GameObject player;
+   
 
     void Update()
     {
@@ -21,6 +22,7 @@ public class PauseMenu : MonoBehaviour
     public void ResumeGame()
     {
         pauseMenuUI.SetActive(false);
+        AudioListener.pause = false;
         Time.timeScale = 1f;
         isPaused = false;
     }
@@ -28,13 +30,14 @@ public class PauseMenu : MonoBehaviour
     public void PauseGame()
     {
         pauseMenuUI.SetActive(true);
+        AudioListener.pause = true;
         Time.timeScale = 0f;
         isPaused = true;
     }
 
     public void RestartLevel()
     {
-        Time.timeScale = 1f; // Reset time scale if paused
+        Time.timeScale = 1f; 
         PlayerLivesManager.Instance.ResetLives();
         SceneManager.LoadScene("LevelOne");
     }
@@ -42,8 +45,8 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitToMainMenu()
     {
-        Time.timeScale = 1f; // Make sure time is normal again
-        SceneManager.LoadScene("MainMenu"); // Replace with your main menu scene name
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu"); 
     }
     
     public void SaveButtonPressed()

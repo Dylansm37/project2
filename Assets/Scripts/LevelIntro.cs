@@ -1,14 +1,3 @@
-using TMPro; // Add this at the top!
-using UnityEngine;
-using UnityEngine.SceneManagement;
-
-
-
-
-
-
-
-
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -25,7 +14,6 @@ public class LevelIntro : MonoBehaviour
     {
         currentSceneName = SceneManager.GetActiveScene().name;
 
-        // Decide which level to load based on current scene name
         if (currentSceneName == "LevelOneIntro")
         {
             nextSceneName = "LevelOne";
@@ -38,12 +26,10 @@ public class LevelIntro : MonoBehaviour
         }
         else
         {
-            // Fallback/default
             nextSceneName = "LevelOne";
             levelText.text = "Level 1";
         }
 
-        // Show lives
         if (PlayerLivesManager.Instance != null)
         {
             livesText.text = "Lives: " + PlayerLivesManager.Instance.lives;
@@ -54,7 +40,6 @@ public class LevelIntro : MonoBehaviour
             Debug.LogWarning("PlayerLivesManager not found!");
         }
 
-        // Load next level after delay
         Invoke("LoadNextScene", 2.5f);
     }
 

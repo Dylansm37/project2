@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro; // If using TextMeshPro
+using TMPro; 
 
 public class LivesUI : MonoBehaviour
 {
-    public TextMeshProUGUI livesText; // Use Text if not using TMP
+    public TextMeshProUGUI livesText; 
 
     private void Update()
     {

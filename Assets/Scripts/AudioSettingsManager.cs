@@ -8,7 +8,6 @@ public class AudioSettingsManager : MonoBehaviour
 
     private void Start()
     {
-        // Load saved volume or set to default (1.0)
         float savedVolume = PlayerPrefs.GetFloat("Volume", 1f);
         volumeSlider.value = savedVolume;
         AudioListener.volume = savedVolume;

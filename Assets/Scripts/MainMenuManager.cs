@@ -4,14 +4,14 @@ using UnityEngine.SceneManagement;
 public class MainMenuManager : MonoBehaviour
 {
     public void StartGame()
-    {
+    {   
+        PlayerLivesManager.Instance.ResetLives();
         SceneManager.LoadScene("LevelOneIntro"); 
     }
 
     public void QuitGame()
     {
         Application.Quit();
-        Debug.Log("Quit game called"); // Useful when testing in editor
     }
 
     public void LoadSavedGame()

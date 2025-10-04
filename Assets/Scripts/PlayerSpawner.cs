@@ -10,7 +10,7 @@ public class PlayerSpawner : MonoBehaviour
         if (LoadPositionAfterSceneLoad != Vector3.zero)
         {
             transform.position = LoadPositionAfterSceneLoad;
-            LoadPositionAfterSceneLoad = Vector3.zero; // Reset so it doesn't affect new games
+            LoadPositionAfterSceneLoad = Vector3.zero; 
         }
     }
 }

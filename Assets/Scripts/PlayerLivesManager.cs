@@ -10,7 +10,6 @@ public class PlayerLivesManager : MonoBehaviour
 
     private void Awake()
     {
-        // Singleton pattern to persist across scenes
         if (Instance == null)
         {
             Instance = this;
@@ -24,13 +23,12 @@ public class PlayerLivesManager : MonoBehaviour
 
     private void OnEnable()
     {
-        // Subscribe to sceneLoaded event
+        
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnDisable()
     {
-        // Unsubscribe to avoid memory leaks
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
@@ -50,16 +48,14 @@ public class PlayerLivesManager : MonoBehaviour
             {
                 Debug.LogWarning("GameOverUI is null — trying to reconnect after scene load.");
             }
-
-            // DO NOT reload the scene here!
+            
         }
         else
         {
-            // Restart current scene if lives remain
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
-    
+
     public void ResetLives()
     {
         lives = 3;
@@ -69,12 +65,10 @@ public class PlayerLivesManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Reconnect the GameOverUI after a scene reload
         gameOverUI = FindObjectOfType<GameOverUI>();
 
         if (lives < 0 && gameOverUI != null)
         {
-            Debug.Log("GameOverUI reconnected after scene load. Showing Game Over panel.");
             gameOverUI.ShowGameOver();
         }
         else if (gameOverUI == null)
