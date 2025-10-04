@@ -59,6 +59,12 @@ public class PlayerLivesManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
+    
+    public void ResetLives()
+    {
+        lives = 3;
+    }
+
 
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)

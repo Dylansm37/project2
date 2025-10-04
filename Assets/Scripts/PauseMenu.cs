@@ -5,6 +5,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
     private bool isPaused = false;
+    public GameObject player;
 
     void Update()
     {
@@ -34,6 +35,7 @@ public class PauseMenu : MonoBehaviour
     public void RestartLevel()
     {
         Time.timeScale = 1f; // Reset time scale if paused
+        PlayerLivesManager.Instance.ResetLives();
         SceneManager.LoadScene("LevelOne");
     }
 
@@ -42,5 +44,10 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f; // Make sure time is normal again
         SceneManager.LoadScene("MainMenu"); // Replace with your main menu scene name
+    }
+    
+    public void SaveButtonPressed()
+    {
+        SaveSystem.SaveGame(player);
     }
 }

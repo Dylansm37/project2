@@ -13,4 +13,18 @@ public class MainMenuManager : MonoBehaviour
         Application.Quit();
         Debug.Log("Quit game called"); // Useful when testing in editor
     }
+
+    public void LoadSavedGame()
+    {
+        if (SaveSystem.HasSave())
+        {
+            SaveData data = SaveSystem.LoadGame();
+            SceneManager.LoadScene(data.sceneName);
+            PlayerSpawner.LoadPositionAfterSceneLoad = new Vector3(data.playerX, data.playerY, data.playerZ);
+        }
+        else
+        {
+            Debug.Log("No saved game to load.");
+        }
+    }
 }
